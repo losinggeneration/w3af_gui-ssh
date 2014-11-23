@@ -1,0 +1,12 @@
+w3af_gui via ssh
+
+Build with:
+ssh-keygen $PWD/ssh/id_rsa
+# Or copy your id_rsa.pub into ssh/
+docker build -t w3af_gui-ssh .
+
+Run with:
+docker run -d -P w3af_gui-ssh
+
+Connect with:
+ssh -Y w3af@<w3af_gui-ssh ip>
